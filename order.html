@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment & Orders Portal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  /* Smooth transitions */
+  .hover-warning {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  /* Hover effect */
+  .hover-warning:hover {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #000 !important;
+  }
+
+  /* Pressed / active effect */
+  .hover-warning:active {
+    transform: scale(0.96);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Ripple effect */
+  .hover-warning::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  .hover-warning:active::after {
+    width: 220%;
+    height: 220%;
+    opacity: 1;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.6s ease;
+  }
+</style>
+</head>
+<body class="bg-light">
+   <!-- section one starts here -->
+            <section class="row">
+
+                <div class="col-lg-3 text-end">
+                    <!-- navbelow tag element will hold all the contents of the navbar -->
+                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                        <a href="index.html" class="navbar-brand"><b><img src="Images/Logo.png" alt="Home" height="60%" width="50px"></b></a>
+
+                        <!-- below is the toggler/hamburger button to either collapse or expand contents depending  the different screen sizes -->
+
+                        <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
+
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div id="navbarcontents" class="navbar-collapse  collapse">
+                            <div class="navbar-nav">
+                                <a href="index.html" class="nav-link" im>Home</a>
+                                <a href="order.html" class="nav-link">Order</a>
+                                <a href="About.html" class="nav-link">Help</a>
+
+                            </div>
+                        </div>
+                     </nav>
+
+
+                </div>
+            </section><hr>
+
+<!-- Top Navigation -->
+<nav class="navbar navbar-light bg-white shadow-sm">
+  <div class="container">
+    <span class="navbar-brand fw-bold">Order Portal</span>
+    <div class="ms-auto">
+      <button class="btn btn-outline-primary hover-warning">Sign In</button>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Welcome 👋 Please Sign In</h2>
+
+  <!-- Sign In Section -->
+  <div class="card shadow mb-5">
+    <div class="card-body">
+      <form class="border border-2 rounded p-3">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="you@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 hover-warning">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Section -->
+  <h3 class="mb-3">Make an Order 🛒</h3>
+  <div class="card shadow mb-5">
+    <div class="card-body">
+      <form class="border border-2 rounded p-3">
+        <div class="mb-3">
+          <label class="form-label">Product Name</label>
+          <input type="text" class="form-control" placeholder="Product name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Quantity</label>
+          <input type="number" class="form-control" min="1" value="1">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Delivery Address</label>
+          <textarea class="form-control" rows="2"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Payment Section -->
+  <h3 class="mb-3">Choose Payment Method 💳</h3>
+  <div class="card shadow mb-5">
+    <div class="card-body">
+      <a href="https://developer.safaricom.co.ke/" target="_blank" class="btn btn-success w-100 mb-3 d-flex align-items-center justify-content-center gap-2 text-decoration-none hover-warning">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/M-PESA_LOGO-01.svg" alt="M-Pesa" height="25">
+        <span class="text-white">M-Pesa</span>
+      </a>
+      <a href="https://www.paypal.com/" target="_blank" class="btn btn-info w-100 d-flex align-items-center justify-content-center gap-2 text-decoration-none hover-warning">
+        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" height="25">
+        <span class="text-white">PayPal</span>
+      </a>
+      <p class="text-muted mt-3 small">Payments require backend integration with M-Pesa API and PayPal SDK.</p>
+    </div>
+  </div>
+
+  <!-- Tracking Section -->
+  <h3 class="mb-3">Track Your Order 🚚</h3>
+  <div class="card shadow">
+    <div class="card-body">
+      <div class="mb-3">
+        <label class="form-label">Order ID</label>
+        <input type="text" class="form-control" placeholder="Enter your order ID">
+      </div>
+      <button class="btn btn-dark w-100 hover-warning">Track Delivery</button>
+      <div class="alert alert-secondary mt-3">
+        Status: <strong>Pending / In Transit / Delivered</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilos Farm Fresh Products</title>
-    <link rel="stylesheet" href="dist/css/bootstrap.css">
-    <script src="dist/js/bootstrap.js"></script>
-    
-   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lilos Farm Fresh Products</title>
+<link rel="stylesheet" href="dist/css/bootstrap.css">
+<script src="dist/js/bootstrap.js"></script>
+<style>
+/* Navbar Customization */
+.navbar {background: greenyellow; border-radius: 12px; box-shadow: darkolivegreen; padding: 1rem 2rem;}
+
+
+/* Card Customization without hover effect */
+.card {border-radius: 20px; overflow: hidden; border: none; background: #fff; margin-bottom: 2rem;}
+.card img {border-radius: 15px;}
+.card-body {padding: 1.5rem; text-align: center;}
+.card-title {color: dark; font-weight: 700;}
+.card-text {color: #555;}
+.badge {font-size: 0.9rem; padding: 0.4em 0.6em;}
+
+/* Section Titles */
+h2, h3, h4 {color: #333; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);}
+</style>
 </head>
 <body class="bg-success-subtle">
-     <!-- section one starts here -->
-            <section class="row">
 
-                <div class="col-lg-3 text-center">
-                    <!-- navbelow tag element will hold all the contents of the navbar -->
-                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-                        <a href="index.html" class="navbar-brand"><b><img src="Images/Logo.png" alt="Home" height="60%" width="50px"></b></a>
-
-                        <!-- below is the toggler/hamburger button to either collapse or expand contents depending  the different screen sizes -->
-
-                        <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
-
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div id="navbarcontents" class="navbar-collapse  collapse">
-                            <div class="navbar-nav">
-                                <a href="index.html" class="nav-link" im>Home</a>
-                                <a href="Products.html" class="nav-link">Grocery</a>
-                                <a href="About.html" class="nav-link">Help</a>
-
-                            </div>
-                        </div>
-                     </nav>
-
-
-                </div>
-            </section><br>
-           
-         <section class="row">
-    <div class="col-12">
-
-        <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+<!-- Navbar -->
+<section class="row mb-5">
+<div class="col-12">
+<nav class="navbar navbar-expand-lg">
+<a href="index.html" class="navbar-brand"><img src="Images/Logo.png" alt="Home" width="60"></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div id="navbarcontents" class="collapse navbar-collapse">
+<div class="navbar-nav ms-auto">
+<a href="index.html" class="nav-link">Home</a>
+<a href="order.html" class="nav-link">Order</a>
+<a href="About.html" class="nav-link">Help</a>
+</div>
+</div>
+</nav>
+</div>
+</section>
+ <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
 
             <div class="carousel-inner">
 
@@ -84,170 +84,46 @@
 </section>
 
 
-         <!-- section one ends here -->
-<h2><b>Our Products</b></h2>
-         <section class="row">
-           
-            <h5>Cow products</h5>
-            <div class="col-lg-4 text-center">
-    
-                    <h5>Milk</h5>
-                <img src="Images/Milk.jpg" alt="cow milk" width="300px" height="200px">
-                <p>For a healthy lifestyle, our cow products are the best choice for you and your family.</p>
+<!-- Product Section -->
+<section class="container mb-5">
+<h2 class="text-center mb-4">Our Products</h2>
 
-                 <b class="text-warning">ksh 150 per litre</b><br>
+<!-- Cow Products -->
+<h4 class="mb-4">Cow Products</h4>
+<div class="row g-4">
+<div class="col-md-4"><div class="card h-100"><img src="Images/Milk.jpg" class="card-img-top" alt="Milk" height="200"><div class="card-body"><h5 class="card-title">Milk</h5><p class="card-text">For a healthy lifestyle, our cow products are the best choice for you and your family.</p><b class="text-warning">Ksh 150 per litre</b><br><span class="badge bg-danger">5% off</span></div></div></div>
+<div class="col-md-4"><div class="card h-100"><img src="Images/Meat.jpg" class="card-img-top" alt="Meat" height="200"><div class="card-body"><h5 class="card-title">Meat</h5><p class="card-text">For a healthy lifestyle, our meat products are the best choice for you and your family. Sweet and affordable prices in town.</p><b class="text-warning">Ksh 600/kg</b><br><span class="badge bg-danger">10% off</span></div></div></div>
+<div class="col-md-4"><div class="card h-100"><img src="Images/skinhides.jpg" class="card-img-top" alt="Skin Hides" height="200"><div class="card-body"><h5 class="card-title">Cow Products</h5><p class="card-text">Connect to culture with wonderfully made traditional clothing straight from the cow.</p><b class="text-warning">Ksh 1,000</b><br><span class="badge bg-danger">25% off</span></div></div></div>
+</div>
 
-                <span class="badge bg-danger">5% off</span>
+<!-- Poultry Products -->
+<h4 class="mt-5 mb-4">Poultry Products</h4>
+<div class="row g-4">
+<div class="col-md-6"><div class="card h-100"><img src="Images/eggs.jpg" class="card-img-top" alt="Kienyeji Eggs" height="250"><div class="card-body"><h5 class="card-title">Kienyeji Eggs</h5><p class="card-text">Affordable eggs perfect for your baking needs.</p><b class="text-warning">Ksh 450</b></div></div></div>
+<div class="col-md-6"><div class="card h-100"><img src="Images/chicken meat.jpg" class="card-img-top" alt="Chicken Meat" height="250"><div class="card-body"><h5 class="card-title">Chicken Meat (Kienyeji)</h5><p class="card-text">High-quality chicken meat for your daily needs.</p><b class="text-warning">Ksh 100</b></div></div></div>
+</div>
 
-            </div>
+<!-- Vegetable Products -->
+<h4 class="mt-5 mb-4">Vegetable Products</h4>
+<div class="row g-4">
+<div class="col-md-4"><div class="card h-100"><img src="Images/tomatoes.jpg" class="card-img-top" alt="Tomatoes" height="300"><div class="card-body"><h5 class="card-title">Tomatoes</h5><p class="card-text">Naturally tomatoes straight from the farm.</p><b class="text-warning">Ksh 80 / bunch</b></div></div></div>
+<div class="col-md-4"><div class="card h-100"><img src="Images/corriander.jpg" class="card-img-top" alt="Corriander" height="300"><div class="card-body"><h5 class="card-title">Corriander</h5><p class="card-text">Fresh corriander straight from the farm.</p><b class="text-warning">Ksh 150 / bunch</b></div></div></div>
+<div class="col-md-4"><div class="card h-100"><img src="Images/carrot.jpg" class="card-img-top" alt="Carrot" height="300"><div class="card-body"><h5 class="card-title">Carrot</h5><p class="card-text">Fresh carrots straight from the farm.</p><b class="text-warning">Ksh 100 / bunch</b></div></div></div>
+</div>
 
-             <div class="col-lg-4 text-center">
-                
-                <h5>Meat</h5>
-                <img src="Images/Meat.jpg" alt=" Cow Meat" width="300px" height="200px">
-                <p>For a healthy lifestyle, our meat products are the best choice for you and your family.
-                    For a sweet and affordable meat prices in town
-                </p>
-
-                 <b class="text-warning">ksh 600/kg</b><br>
-
-                <span class="badge bg-danger">10% off</span>
-
-            </div>
-             <div class="col-lg-4 text-center">
-                
-                <h5>Cow products</h5>
-                <img src="Images/skinhides.jpg" alt="skinhides" width="300px" height="200px">
-                <p>Feelig the need to connect to culture worry no more cause we got you enjoy a wonderfuly made traditional clothing straight from the cow.</p>
-
-                 <b class="text-warning">ksh 1,000</b><br>
-
-                <span class="badge bg-danger">25% off</span>
-
-            </div>
-
-         </section><br><br><hr>
-<section class="row">
-
-    <div class="col-12 text-center mb-2">
-        <h4><b>Poultry Products</b></h4>
-    </div>
-
-    <div class="col-lg-6 text-center">
-       <h5><b><i>kienyeji eggs</i></b></h5>
-        <img src="Images/eggs.jpg" alt="Poultry products"  height="250">
-       
-        <p>
-            Want to begin your baking career and do not know where to get eggs
-            at an affordable price? Look no further, Lilos Farm has your back.
-        </p>
-        <b class="text-warning">ksh 450</b>
-    </div>
-
-    <div class="col-lg-6 text-center">
-        <h5><i>Chicken Meat (Kienyeji)</i></h5>
-        <img src="Images/chicken meat.jpg" alt="Poultry products" height="250">
-        <img src="Images/Image2.jpg" alt="Image2" height="250">
-        <p>
-            Want to begin your baking career and do not know where to get eggs
-            at an affordable price? Look no further, Lilos Farm has your back.
-        </p>
-        <b class="text-warning">ksh 100</b>
-    </div>
-
-</section><br><br><hr>
-
-<section class="row mb-5">
-
-    <!-- Section heading -->
-    <div class="col-12 text-center mb-4">
-        <h3><b>Vegetable Products</b></h3>
-    </div>
-
-    <!-- Banana card -->
-    <div class="col-lg-4 col-md-6 mb-3">
-         <h5 class="card-title"><i>Tomatoes</i></h5>
-        <div class="card text-center shadow h-100">
-            <img src="Images/tomatoes.jpg" class="card-img-top product-img" alt="Tomatoes" height="300px">
-            <div class="card-body">
-                
-                <p class="card-text">Naturally tomatoes straight from the farm.</p>
-                <b class="text-warning">Ksh 80 / bunch</b>
-            </div>
-        </div>
-    </div>
-
-    <!-- Strawberry card -->
-    <div class="col-lg-4 col-md-6 mb-3">
-         <h5 class="card-title"><i></i>corriander</i></h5>
-        <div class="card text-center shadow h-100">
-            <img src="Images/corriander.jpg" class="card-img-top product-img" alt="corriander" height="300px">
-            <div class="card-body">
-                
-                <p class="card-text">Fresh corriander straight from the farm.</p>
-                <b class="text-warning">Ksh 150 / bunch</b>
-            </div>
-        </div>             
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-3">
-         <h5 class="card-title"><i></i>carrot</i></h5>
-        <div class="card text-center shadow h-100">
-            <img src="Images/carrot.jpg" class="card-img-top product-img" alt="carrot" height="300px">
-            <div class="card-body">
-                
-                <p class="card-text">Fresh carrots straight from the farm.</p>
-                <b class="text-warning">Ksh 100 / bunch</b>
-            </div>
-        </div>             
-    </div>
-    
+<!-- Fruit Products -->
+<h4 class="mt-5 mb-4">Fruit Products</h4>
+<div class="row g-4">
+<div class="col-md-4"><div class="card h-100"><img src="Images/banana.jpg" class="card-img-top" alt="Bananas" height="300"><div class="card-body"><h5 class="card-title">Bananas</h5><p class="card-text">Naturally ripened bananas straight from the farm.</p><b class="text-warning">Ksh 80 / bunch</b></div></div></div>
+<div class="col-md-4"><div class="card h-100"><img src="Images/strawberries.jpg" class="card-img-top" alt="Strawberries" height="300"><div class="card-body"><h5 class="card-title">Strawberries</h5><p class="card-text">Fresh strawberries straight from the farm.</p><b class="text-warning">Ksh 150 / bunch</b></div></div></div>
+<div class="col-md-4"><div class="card h-100"><img src="Images/watermelon.jpg" class="card-img-top" alt="Watermelons" height="300"><div class="card-body"><h5 class="card-title">Watermelons</h5><p class="card-text">Fresh watermelons straight from the farm.</p><b class="text-warning">Ksh 100 / bunch</b></div></div></div>
+</div>
 
 </section>
-<section class="row">
-    <!-- Section heading -->
-    <div class="col-12 text-center mb-4">
-        <h3><b>Fruit Products</b></h3>
-    </div>
-
-    <!-- Banana card -->
-    <div class="col-lg-4  mb-4">
-         <h5 class="card-title"><i></i>Bananas</i></h5>
-        <div class="card text-center shadow h-100">
-            <img src="Images/banana.jpg" class="card-img-top product-img" alt="Bananas" height="300px">
-            <div class="card-body">
-                
-                <p class="card-text">Naturally ripened bananas straight from the farm.</p>
-                <b class="text-warning">Ksh 80 / bunch</b>
-            </div>
-        </div>
-    </div>
-
-    <!-- Strawberry card -->
-    <div class="col-lg-4  mb-4">
-         <h5 class="card-title"><i></i>Strawberries</i></h5>
-        <div class="card text-center shadow h-100">
-            <img src="Images/strawberries.jpg" class="card-img-top product-img" alt="Strawberries" height="300px">
-            <div class="card-body">
-                
-                <p class="card-text">Fresh strawberries straight from the farm.</p>
-                <b class="text-warning">Ksh 150 / bunch</b>
-            </div>
-        </div>             
-    </div>
-
-    <div class="col-lg-4 mb-4">
-         <h5 class="card-title"><i></i>Watermelons</i></h5>
-        <div class="card text-center shadow h-100">
-            <img src="Images/watermelon.jpg" class="card-img-top product-img" alt="Watermelons" height="300px">
-            <div class="card-body">
-                
-                <p class="card-text">Fresh watermelons straight from the farm.</p>
-                <b class="text-warning">Ksh 100 / bunch</b>
-            </div>
-        </div>             
-    </div>
-</section><br><br><hr>
+<script src="dist/js/bootstrap.js"></script>
+</body>
+</html>
+<script src="dist/js/bootstrap.js"></script>
 <section class="row bg-warning">
                     
                     <div class="col-lg-4 p-3 text-dark">
@@ -287,6 +163,7 @@
                 <b>Developed by Isaac&copy;All rights reserved</b>
 
                 </footer>
+
 
 
 </body>
