@@ -12,6 +12,10 @@
     overflow: hidden;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
+  body{
+    background-color: green;
+    
+  }
 
   /* Hover effect */
   .hover-warning:hover {
@@ -39,7 +43,9 @@
     transform: translate(-50%, -50%);
     opacity: 0;
   }
-
+body{
+  background-color: green;
+}
   .hover-warning:active::after {
     width: 220%;
     height: 220%;
@@ -50,35 +56,22 @@
 </head>
 <body class="bg-light">
    <!-- section one starts here -->
-            <section class="row">
-
-                <div class="col-lg-3 text-end">
-                    <!-- navbelow tag element will hold all the contents of the navbar -->
-                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-                        <a href="index.html" class="navbar-brand"><b><img src="Images/Logo.png" alt="Home" height="60%" width="50px"></b></a>
-
-                        <!-- below is the toggler/hamburger button to either collapse or expand contents depending  the different screen sizes -->
-
-                        <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
-
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div id="navbarcontents" class="navbar-collapse  collapse">
-                            <div class="navbar-nav">
-                                <a href="index.html" class="nav-link" im>Home</a>
-                                <a href="order.html" class="nav-link">Order</a>
-                                <a href="About.html" class="nav-link">Help</a>
-
-                            </div>
-                        </div>
-                     </nav>
-
-
-                </div>
-            </section><hr>
-
+           <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Lilo's Fresh Farm</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <!-- Top Navigation -->
 <nav class="navbar navbar-light bg-white shadow-sm">
   <div class="container">
@@ -135,16 +128,15 @@
   <div class="card shadow mb-5">
     <div class="card-body">
       <a href="https://developer.safaricom.co.ke/" target="_blank" class="btn btn-success w-100 mb-3 d-flex align-items-center justify-content-center gap-2 text-decoration-none hover-warning">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/M-PESA_LOGO-01.svg" alt="M-Pesa" height="25">
+        <img src="Images/mpesa.png" alt="M-Pesa" height="25">
         <span class="text-white">M-Pesa</span>
       </a>
       <a href="https://www.paypal.com/" target="_blank" class="btn btn-info w-100 d-flex align-items-center justify-content-center gap-2 text-decoration-none hover-warning">
-        <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" height="25">
+        <img src="Images/paypal.png" alt="PayPal" height="25">
         <span class="text-white">PayPal</span>
       </a>
-      <p class="text-muted mt-3 small">Payments require backend integration with M-Pesa API and PayPal SDK.</p>
-    </div>
-  </div>
+      
+  </div><br><br><hr><hr>
 
   <!-- Tracking Section -->
   <h3 class="mb-3">Track Your Order 🚚</h3>
@@ -164,5 +156,70 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<!-- FOOTER -->
+<footer class="bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+
+      <!-- About / Logo -->
+      <div class="col-md-4 mb-4 text-center text-md-start">
+        <img src="Images/Logo.png" width="60" alt="Lilo's Farm Logo">
+        <h5 class="mt-2">LILO'S FARM PRODUCE</h5>
+        <p>Fresh agricultural products delivered straight from our farm to your doorstep. Quality you can trust!</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4 text-center text-md-start">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="order.html" class="text-white text-decoration-none">Order</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h6 class="fw-bold">Categories</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Grains & Cereals</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Vegetables</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Fruits</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Livestock & Dairy</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h6 class="fw-bold">Newsletter</h6>
+        <p>Subscribe to get fresh farm updates and exclusive discounts!</p>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Your email">
+          <button type="submit" class="btn btn-success">Subscribe</button>
+        </form>
+        <div class="mt-3">
+          <a href="#" class="text-white me-2 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white me-2 fs-5"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+
+    <div class="row">
+      <div class="col text-center">
+        <p class="mb-0">&copy; 2026 LILO'S FARM PRODUCE. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+
 </body>
 </html>
