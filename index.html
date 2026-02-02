@@ -12,18 +12,37 @@ body {
     background: green;
     font-family: "Segoe UI", sans-serif;
 }
+.market-title {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a, #cddc39);
+    color: #ffffff;
+    font-weight: 900;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 14px;
+    letter-spacing: 1px;
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.35),
+        0 0 10px rgba(205,220,57,0.6);
+}
+
 
 /* Page Title */
 .market-title {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-variant: small-caps;
+    
     font-weight: 800;
-    color: #1b5e20;
-    margin: 30px 0;
+    color: white
+    
 }
-h2{
-  font-style: inherit;
+h1{
   font-family: serif;
+  font-size: xx-large;
+  font-style: oblique;
+  font-variant: small-caps;
+  color: #ffffff;
   
 }
 
@@ -200,12 +219,45 @@ img :hover{
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     cursor: pointer;
 }
-
 .navbar {
-    background: darkgreen;
-    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #1b5e20,
+        #2e7d32,
+        #66bb6a,
+        #fbc02d
+    );
+    border-radius: 14px;
     padding: 1rem 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+
+.navbar-brand img {
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #1b5e20 !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
 
 .agri-circle img {
     width: 100%;
@@ -225,23 +277,40 @@ button :hover{
   padding: 10%;
   border-radius: 10%;
 }
+.navbar{
+   fontcolor: #fff;
+}
+h2{
+  font-style: initial
+;
+color: aliceblue;
+font-size: medium;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 200;
 
+}
+h2 :hover{
+  color: #999;
+}
 </style>
 </head>
 
 <body>
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg mb-5">
+<nav class="navbar navbar-expand-lg mb-5 bg-warning">
     <a href="index.html" class="navbar-brand">
         <img src="Images/Logo.png" width="60">
     </a>
 
     <h4 class="text-white mx-auto"><b>LILO'S FARM PRODUCE</b></h4>
 
-    <div class="navbar-nav ms-auto">
-        <a href="index.html" class="nav-link text-white">Home</a>
-        <a href="order.html" class="nav-link text-white">Order</a>
-        <a href="about.html" class="nav-link text-white">Help</a>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
 </nav>
 
@@ -299,6 +368,46 @@ button :hover{
     <span class="carousel-control-next-icon"></span>
   </button>
 </div>
+<h4 class="bg-warning text-center font-family">Poultry Products</h4>
+<div class="row g-4">
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="card h-100">
+<img src="Images/eggs.jpg" class="card-img-top" height="250">
+<div class="card-body">
+<h5>Kienyeji Eggs</h5>
+<p>Affordable and nutritious eggs.</p>
+<b class="text-warning">Ksh 450</b><br><br>
+<a href="order.html" class="btn btn-success">Buy Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="card h-100">
+<img src="Images/chickenmeat.jpg" class="card-img-top" height="250">
+<div class="card-body">
+<h5>Chicken Meat</h5>
+<p>Fresh broiler chicken meat.</p>
+<b class="text-warning">Ksh 100</b><br><br>
+<a href="order.html" class="btn btn-success">Buy Now</a>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="card h-100">
+<img src="Images/sausages.jpg" class="card-img-top" height="250">
+<div class="card-body">
+<h5>Sausages</h5>
+<p>Delicious chicken sausages.</p>
+<b class="text-warning">Ksh 200</b><br><br>
+<a href="order.html" class="btn btn-success">Buy Now</a>
+</div>
+</div>
+</div>
+
+</div>
 
 <!-- AGRO CATEGORIES -->
 <section class="agri-categories container-fluid py-5">
@@ -340,7 +449,7 @@ button :hover{
 
 <!-- PRODUCT LISTINGS -->
 <div class="container">
-<h2 class="market-title bg-success">🌾 Farm Fresh Agricultural Products</h2>
+<h1 class="market-title">🌾 Farm Fresh Agricultural Products 🌾</h1>
 
 <div class="row g-4">
   <!-- Product 1 -->
@@ -352,7 +461,7 @@ button :hover{
         <h6>Dry Maize (90kg)</h6>
         <div class="price">KSh 4,800</div>
         <div class="old-price">KSh 6,000</div>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
@@ -366,7 +475,7 @@ button :hover{
         <h6>Beans (50kg)</h6>
         <div class="price">KSh 6,500</div>
         <div class="old-price">KSh 7,600</div>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
@@ -380,7 +489,7 @@ button :hover{
         <h6>Irish Potatoes (Bag)</h6>
         <div class="price">KSh 2,100</div>
         <div class="old-price">KSh 3,000</div>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
@@ -394,11 +503,11 @@ button :hover{
         <h6>Fresh Tomatoes (Crate)</h6>
         <div class="price">KSh 1,500</div>
         <div class="old-price">KSh 2,000</div>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
-</div>
+</div><hr><hr>
 
 <h4>Other products</h4>
 <div class="row g-4">
@@ -410,7 +519,7 @@ button :hover{
         <h5>Corriander</h5>
         <p>Fresh cow milk straight from the farm.</p>
         <b class="text-warning">Ksh 150 / litre</b><br><br>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
@@ -422,7 +531,7 @@ button :hover{
         <h5>Watermelon</h5>
         <p>High-quality beef for your family.</p>
         <b class="text-warning">Ksh 600 / kg</b><br><br>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
@@ -434,12 +543,12 @@ button :hover{
         <h5>Strawberries</h5>
         <p>Fresh strawberries straight from the farm.</p>
         <b class="text-warning">Ksh 1,000 / kg</b><br><br>
-        <a href="order.html" class="btn-buy">Buy Now</a>
+        <a href="order.html" class="btn-buy">Buy Now</a><br>
       </div>
     </div>
   </div>
 
-</div>
+</div><br><br><br><hr>
 
 <!-- Bootstrap JS -->
 <script src="dist/js/bootstrap.bundle.min.js"></script>
